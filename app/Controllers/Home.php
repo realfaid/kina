@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-	public function index()
+	public function hlavni()
 	{
-		return view('welcome_message');
+		echo view("head");
 	}
 }
