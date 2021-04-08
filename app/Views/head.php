@@ -17,10 +17,11 @@
                 </div>
                 <div class="container-fluid collapse navbar-collapse" id="navbar-responsive">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span> </a></li>
+                    <li class="nav-item active"><a class="nav-link" href="">Home <span class="sr-only">(current)</span> </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Page 1 <span class="sr-only">(current)</span> </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Page 2 <span class="sr-only">(current)</span> </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Page 3 </a></li>
+                    <li class="nav-item"><a class="nav-link" href="login">Přihlášení </a></li>
                 </ul>
             </div>
         </nav>
