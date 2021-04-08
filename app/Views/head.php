@@ -10,19 +10,18 @@
     <body>
                 <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #4a0555;">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Kino</a>
+                    <a class="navbar-brand" href="/">Kino</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="container-fluid collapse navbar-collapse" id="navbar-responsive">
+                
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="">Home <span class="sr-only">(current)</span> </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Page 1 <span class="sr-only">(current)</span> </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Page 2 <span class="sr-only">(current)</span> </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Page 3 </a></li>
-                    <li class="nav-item"><a class="nav-link" href="login">Přihlášení </a></li>
-                    <li class="nav-item"><a class="nav-link" href="create_user">Registrace </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Úvod <span class="sr-only">(current)</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("auth/login")?>">Přihlášení </a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("auth/create_user")?>">Registrace </a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("auth/logout")?>">odhlásit </a></li>
                 </ul>
             </div>
         </nav>

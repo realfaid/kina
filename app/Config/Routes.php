@@ -34,10 +34,14 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::hlavni');
 
+$routes->group('auth', ['namespace' => 'IonAuth\Controllers'], function ($routes) {
 	$routes->add('login', 'Auth::login');
-	$routes->add('create_user', 'Auth::create_user');
 	$routes->get('logout', 'Auth::logout');
 	$routes->add('forgot_password', 'Auth::forgot_password');
+	//$routes->add('login', 'Auth::login');
+	//$routes->add('create_user', 'Auth::create_user');
+	//$routes->get('logout', 'Auth::logout');
+	//$routes->add('forgot_password', 'Auth::forgot_password');
 	// $routes->get('/', 'Auth::index');
 	// $routes->add('create_user', 'Auth::create_user');
 	// $routes->add('edit_user/(:num)', 'Auth::edit_user/$1');
@@ -49,7 +53,7 @@ $routes->get('/', 'Home::hlavni');
 	// $routes->post('reset_password/(:hash)', 'Auth::reset_password/$1');
 	// ...
 
-
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing
