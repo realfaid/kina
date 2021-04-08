@@ -35,6 +35,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::hlavni');
 
 	$routes->add('login', 'Auth::login');
+	$routes->add('create_user', 'Auth::create_user');
 	$routes->get('logout', 'Auth::logout');
 	$routes->add('forgot_password', 'Auth::forgot_password');
 	// $routes->get('/', 'Auth::index');

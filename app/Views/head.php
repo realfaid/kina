@@ -22,6 +22,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Page 2 <span class="sr-only">(current)</span> </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Page 3 </a></li>
                     <li class="nav-item"><a class="nav-link" href="login">Přihlášení </a></li>
+                    <li class="nav-item"><a class="nav-link" href="create_user">Registrace </a></li>
                 </ul>
             </div>
         </nav>
