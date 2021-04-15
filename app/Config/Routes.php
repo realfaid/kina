@@ -19,7 +19,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  */
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
-$routes->setDefaultMethod('hlavni');
+$routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
@@ -32,20 +32,30 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::hlavni');
+$routes->get('/', 'Home::index');
+$routes->get('vypis_filmu', 'Home::vypis_filmu');
+$routes->get('vypis_salu', 'Home::vypis_salu');
+$routes->get('vypis_vstupenek', 'Home::vypis_vstupenek');
+$routes->get('pridat_film', 'Home::pridat_film');
+$routes->post('zapsat', 'Home::zapsat');
+$routes->get('uprava/(:num)','Home::uprava/$1');
+$routes->get('upravaSalu/(:num)','Home::upravaSalu/$1');
+$routes->put('zapsatUpravu/(:num)','Home::zapsatUpravu/$1');
+$routes->get('smazat/(:num)','Home::smazat/$1');
+$routes->put('zapsatUpravuSalu/(:num)','Home::zapsatUpravuSalu/$1');
 
 $routes->group('auth', ['namespace' => 'IonAuth\Controllers'], function ($routes) {
 	$routes->add('login', 'Auth::login');
 	$routes->get('logout', 'Auth::logout');
 	$routes->add('forgot_password', 'Auth::forgot_password');
 	//$routes->add('login', 'Auth::login');
-	//$routes->add('create_user', 'Auth::create_user');
+	$routes->add('create_user', 'Auth::create_user');
 	//$routes->get('logout', 'Auth::logout');
 	//$routes->add('forgot_password', 'Auth::forgot_password');
 	// $routes->get('/', 'Auth::index');
 	// $routes->add('create_user', 'Auth::create_user');
 	// $routes->add('edit_user/(:num)', 'Auth::edit_user/$1');
-	// $routes->add('create_group', 'Auth::create_group');
+	//$routes->add('create_group', 'Auth::create_group');
 	// $routes->get('activate/(:num)', 'Auth::activate/$1');
 	// $routes->get('activate/(:num)/(:hash)', 'Auth::activate/$1/$2');
 	// $routes->add('deactivate/(:num)', 'Auth::deactivate/$1');

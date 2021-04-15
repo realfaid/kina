@@ -17,22 +17,25 @@
                     </button>
                 </div>
                 <div class="container-fluid collapse navbar-collapse" id="navbar-responsive">
-                
-                <ul class="nav navbar-nav ml-auto ">
+
+                <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="/">Úvod <span class="sr-only">(current)</span> </a></li>
 
-             
+
+                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("vypis_filmu")?>">Filmy </a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("vypis_salu")?>">Sály </a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("vypis_vstupenek")?>">Vstupenky</a></li>
                 </ul>
-</div>
-<div class="container collapse navbar-collapse">
+
+                </div>
+                <div class="container collapse navbar-collapse">
                 <ul class="nav navbar-nav ml-auto ">
 
-                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("auth/login")?>">Přihlášení </a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url("auth/create_user")?>">Registrace </a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url("auth/logout")?>">Odhlásit </a></li>
              
                 </ul>
-              
             </div>
+
         </nav>
     </body>
 </html>
