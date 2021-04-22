@@ -1,3 +1,5 @@
+<?php $db = \Config\Database::connect(); ?>
+
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -21,21 +23,48 @@
                             <label>Délka filmu(číslo)</label>
                             <input type="text" name="delka" class="form-control" placeholder="Napiš délku filmu(číslo)" required>
                         </div>
-                        <div class="form-group mb-2">
-                            <label>Typ filmu(číslo)</label>
-                            <input type="text" name="id_typu_filmu" class="form-control" placeholder="Napiš typ filmu(číslo)" >
+                        <label>Žánr filmu</label>
+
+                        <div class="info">
+                        <select class="form-control" name="id_zanru_filmu" id="id_zanru_filmu">
+                        <?php
+                        $query = $db->query("SELECT * FROM zanry_filmu");
+                        foreach ($query->getResult() as $row)
+                        { ?> 
+                        <option value=<?php echo $row->id_zanru?>> <?php echo $row->nazev_zanru;}?></option>
+                        </select>
+
+
+
+                        <label>Země</label>
+                        <select class="form-control" name="zeme_id_zeme" id="zeme_id_zeme">
+                        <?php
+                        $query = $db->query("SELECT * FROM zeme");
+                        foreach ($query->getResult() as $row)
+                        { ?> 
+                        <option value=<?php echo $row->id_zeme?>> <?php echo $row->nazev_zeme;}?></option>
+                        </select>
+
                         </div>
-                        <div class="form-group mb-2">
-                            <label>Žánr filmu(číslo)</label>
-                            <input type="text" name="id_zanru_filmu" class="form-control" placeholder="Napiš žánr fimu(číslo)" >
+
+                        <label>Datum promítání</label>
+                        <select class="form-control" name="id_promitani" id="id_promitani">
+                        <?php
+                        $query = $db->query("SELECT * FROM promitani");
+                        foreach ($query->getResult() as $row)
+                        { ?> 
+                        <option value=<?php echo $row->id_promitani?>> <?php echo $row->datum_promitani;}?></option>
+                        </select>
+
                         </div>
+
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary mt-2">Uložit</button>
                         </div>
                     </form>
                     </div>
-                    </div>
+                    
                     </div>
                     </div>
                     </div></div>

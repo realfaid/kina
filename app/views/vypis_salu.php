@@ -4,6 +4,7 @@
             <div class ="card">
                 <div class="card-header">
                     <h5>Výpis sálů</h5>
+                    <a href="<?= base_url('pridat_sal') ?>" class="btn btn-info btn-sm float-end">Přidat</a>
                 </div>
                 <div class="card-body">
                 <table class="table table-bordered" id="filmy-list">

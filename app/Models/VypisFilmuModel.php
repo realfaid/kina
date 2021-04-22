@@ -13,10 +13,10 @@ class VypisFilmuModel extends Model
         'nazev_cz',
         'originalni_nazev',
         'delka',
-        'id_typu_filmu',
+
         'id_zanru_filmu',
         'zeme_id_zeme',
-      
+        'id_promitani',
         
     ];
 

@@ -1,3 +1,12 @@
+<?php $db = \Config\Database::connect(); 
+
+?>
+
+<?php
+$query   = $db->query('SELECT id_filmu, nazev_cz, originalni_nazev, delka, zeme.nazev_zeme as zeme, zanry_filmu.nazev_zanru as zanr, promitani.datum_promitani as promitani FROM filmy inner join zeme on filmy.zeme_id_zeme = zeme.id_zeme inner join zanry_filmu on filmy.id_zanru_filmu = zanry_filmu.id_zanru inner join promitani on filmy.id_promitani = promitani.id_promitani');
+$results = $query->getResultArray();
+?>
+
 <div class="container mt-4">
     <div class="row">
         <div class ="col-md-12">
@@ -14,30 +23,33 @@
                             <th>Český název</th>
                             <th>Originální název</th>
                             <th>Délka filmu(min)</th>
-                            <th>Typ filmu</th>
+
                             <th>Žánr filmu</th>
                             <th>Země</th>
+                            <th>Datum promítání</th>
                         </tr>
                         </thead>
                         <tbody>
-                            <?php if($filmy): ?>
 
-                                <?php foreach($filmy as $row) : ?>
+
+                                <?php foreach($results as $row) { ?>
+                                    <?php $ids = $row['id_filmu']; ?>
                                     <tr>
                                         <td><?php echo $row['id_filmu']; ?></td>
                                         <td><?php echo $row['nazev_cz']; ?></td>
                                         <td><?php echo $row['originalni_nazev']; ?></td>
                                         <td><?php echo $row['delka']; ?></td>
-                                        <td><?php echo $row['id_typu_filmu']; ?></td>
-                                        <td><?php echo $row['id_zanru_filmu']; ?></td>
-                                        <td><?php echo $row['id_zeme_id']; ?></td>
+
+                                        <td><?php echo $row['zanr']; ?></td>
+                                        <td><?php echo $row['zeme']; ?></td>
+                                        <td><?php echo $row['promitani']; ?></td>
                                         <td>
                                             <a href="<?= base_url('uprava/'.$row['id_filmu'])?>" class="btn btn-primary btn-sm">Upravit</a>
                                             <a href="<?= base_url('smazat/'.$row['id_filmu'])?>" class="btn btn-danger btn-sm">Smazat</a>
                                         </td>
                                         </tr>
-                                        <?php endforeach; ?>
-                                        <?php endif; ?>
+                                        <?php  }?>
+
                             </tbody>
                         </table>
                 </div>
