@@ -1,4 +1,5 @@
 
+    <body style="background-color: #feffd5;">
 <div class="container">
  <h1>Úvodní stránka našeho kina</h1>
  

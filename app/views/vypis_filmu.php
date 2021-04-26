@@ -6,7 +6,7 @@
 $query   = $db->query('SELECT id_filmu, nazev_cz, originalni_nazev, delka, zeme.nazev_zeme as zeme, zanry_filmu.nazev_zanru as zanr, promitani.datum_promitani as promitani FROM filmy inner join zeme on filmy.zeme_id_zeme = zeme.id_zeme inner join zanry_filmu on filmy.id_zanru_filmu = zanry_filmu.id_zanru inner join promitani on filmy.id_promitani = promitani.id_promitani');
 $results = $query->getResultArray();
 ?>
-
+    <body style="background-color: #feffd5;">
 <div class="container mt-4">
     <div class="row">
         <div class ="col-md-12">
