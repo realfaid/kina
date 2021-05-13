@@ -11,12 +11,12 @@
                 <div class="card-body">
                     <form action="<?= base_url('zapsatSal') ?>" method="POST">
                     <div class="form-group mb-2">
-                            <label>Číslo sálu(číslo)</label>
-                            <input type="text" name="cislo_salu"  class="form-control" placeholder="Napiš číslo sálu(číslo)" required>
+                            <label>Číslo sálu</label>
+                            <input type="number" name="cislo_salu"  class="form-control" placeholder="Napiš číslo sálu(číslo)" required>
                         </div>
                         <div class="form-group mb-2">
-                            <label>Typ promítání</label>
-                            <input type="text" name="typ_promitani"  class="form-control" placeholder="Napiš typ promítání" required>
+                            <label>Typ promítání - 3D nebo 2D</label>
+                            <input type="text" name="typ_promitani"  class="form-control" placeholder="Napiš typ promítání" required pattern="3[Dd]|2[Dd]">
                         </div>
                         <div class="form-group mb-2">
                             <label>Typ ozvučení</label>

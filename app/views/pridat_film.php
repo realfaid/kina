@@ -14,15 +14,15 @@
                     <form action="<?= base_url('zapsat') ?>" method="POST">
                         <div class="form-group mb-2">
                             <label>Český název</label>
-                            <input type="text" name="nazev_cz" class="form-control" placeholder="Napiš český název" required>
+                            <input type="text" name="nazev_cz" class="form-control"  placeholder="Napiš český název" required>
                         </div>
                         <div class="form-group mb-2">
                             <label>Originální název</label>
                             <input type="text" name="originalni_nazev" class="form-control" placeholder="Napiš originální název" required>
                         </div>
                         <div class="form-group mb-2">
-                            <label>Délka filmu(číslo)</label>
-                            <input type="text" name="delka" class="form-control" placeholder="Napiš délku filmu(číslo)" required>
+                            <label>Délka filmu</label>
+                            <input type="number" name="delka" class="form-control"  placeholder="Napiš délku filmu" >
                         </div>
                         <label>Žánr filmu</label>
 

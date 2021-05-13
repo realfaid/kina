@@ -12,20 +12,20 @@
                     <form action="<?= base_url('zapsatVstupenku') ?>" method="POST">
                     <div class="form-group mb-2">
                             <label>Čas prodeje(čas)</label>
-                            <input type="text" name="cas_prodeje"  class="form-control" placeholder="Napiš čas prodeje(čas)" required>
+                            <input type="text" name="cas_prodeje"  class="form-control" placeholder="Napiš čas prodeje(11:30:30)" required>
                         </div>
                         <div class="form-group mb-2">
-                            <label>Cena vstupenky(číslo)</label>
-                            <input type="text" name="cena_vstupenky"  class="form-control" placeholder="Napiš cenu vstupenky(číslo)" required>
+                            <label>Cena vstupenky</label>
+                            <input type="number" name="cena_vstupenky"  class="form-control" placeholder="Napiš cenu vstupenky" required>
                         </div>
 
                         <div class="form-group mb-2">
-                            <label>Číslo sálu(číslo)</label>
-                            <input type="text" name="id_salu_id"  class="form-control" placeholder="Napiš číslo sálu(číslo)" required>
+                            <label>Číslo sálu</label>
+                            <input type="number" name="id_salu_id"  class="form-control" placeholder="Napiš číslo sálu" required>
                         </div>
                         <div class="form-group mb-2">
-                            <label>Místo(číslo)</label>
-                            <input type="text" name="misto_v_sale"  class="form-control" placeholder="Napiš místo v sále(číslo)" required>
+                            <label>Místo</label>
+                            <input type="number" name="misto_v_sale"  class="form-control" placeholder="Napiš číslo místa v sále" required>
                         </div>
 
 
